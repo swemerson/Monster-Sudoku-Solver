@@ -15,11 +15,11 @@ int main()
 	cout << "below is a randomly generated SudokuFile:" << endl;
 	cout << "*****************************************" << endl;
 	generatedSudokuFile->toString();
-
+/*
 	SudokuFile * SudokuFileFromFile = SudokuBoardReader::readFile("ExampleSudokuFiles/PH5.txt");
 
 	cout << "*****************************************" << endl;
 	cout << "below is a SudokuFile generated from a file:" << endl;
 	cout << "*****************************************" << endl;
-	SudokuFileFromFile->toString();	
+	SudokuFileFromFile->toString();*/
 }

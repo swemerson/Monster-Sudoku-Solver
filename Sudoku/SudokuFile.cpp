@@ -28,7 +28,7 @@ SudokuFile::~SudokuFile()
 {
 	for (int i = 0; i < N; ++i)
 		delete[] board[i];
-	delete board;
+	delete []board;
 }
 
 int ** SudokuFile::allocateBoard(int N)

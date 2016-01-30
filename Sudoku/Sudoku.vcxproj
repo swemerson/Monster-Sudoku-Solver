@@ -118,6 +118,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Odometer.h" />
+    <ClInclude Include="SudokuBoardGenerator.h" />
+    <ClInclude Include="SudokuBoardReader.h" />
+    <ClInclude Include="SudokuFile.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Odometer.cpp" />
+    <ClCompile Include="SudokuBoardGenerator.cpp" />
+    <ClCompile Include="SudokuBoardReader.cpp" />
+    <ClCompile Include="SudokuFile.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

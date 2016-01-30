@@ -38,20 +38,18 @@ private:
 	int N;//number of cells in a block && edge length of a NxN puzzle
 	int ** board;
 
+public:
 	SudokuFile() {}
 	~SudokuFile();
-	void setP(int p);
-	void setQ(int q);
-	void setN(int n);
-	
-
-public:
 	SudokuFile(int N, int p, int q, int ** board);
 	SudokuFile(int N, int p, int q);
 	static int ** allocateBoard(int N);
 	int getP() const;
 	int getQ() const;
 	int getN() const;
+	void setP(int p);
+	void setQ(int q);
+	void setN(int n);
 	int ** getBoard() const;
 	string toString() const;
 	void setBoard(int ** board);

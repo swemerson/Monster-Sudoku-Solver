@@ -1,6 +1,5 @@
 #include "SudokuFile.h"
 
-SudokuFile::SudokuFile() {}
 SudokuFile::SudokuFile(int N, int p, int q, int ** board)
 {
 	if (N != p * q || N < 1)

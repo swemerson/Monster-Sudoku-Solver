@@ -128,6 +128,7 @@
     <ClCompile Include="SudokuBoardGenerator.cpp" />
     <ClCompile Include="SudokuBoardReader.cpp" />
     <ClCompile Include="SudokuFile.cpp" />
+    <ClCompile Include="SudokuFileExample.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

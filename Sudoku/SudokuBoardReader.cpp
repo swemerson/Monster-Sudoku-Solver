@@ -1,6 +1,6 @@
 #include "SudokuBoardReader.h"
 
-void setSudokuFileParameters(SudokuFile * sf, vector<string> params)
+void SudokuBoardReader::setSudokuFileParameters(SudokuFile * sf, vector<string> params)
 {
 	if (params.size() != 3)
 	{
@@ -12,7 +12,7 @@ void setSudokuFileParameters(SudokuFile * sf, vector<string> params)
 	sf->setQ(stoi(params[2]));
 }
 
-void parseLineOfSudokuBoard(SudokuFile * sf, vector<string> values, int rowNumber)
+void SudokuBoardReader::parseLineOfSudokuBoard(SudokuFile * sf, vector<string> values, int rowNumber)
 {
 	//writes values to the row set in param rowNumber
 	if (sf->getBoard() == NULL)
@@ -26,7 +26,7 @@ void parseLineOfSudokuBoard(SudokuFile * sf, vector<string> values, int rowNumbe
 	}
 }
 
-SudokuFile * readFile(string filePath)
+SudokuFile * SudokuBoardReader::readFile(string filePath)
 {
 	//Get filePath. from path and filename. If path is null, 
 	//it'll default to the current directory
@@ -35,7 +35,16 @@ SudokuFile * readFile(string filePath)
 	string line;
 	int lineCounter = 0;
 	ifstream myFile;
-	myFile.open(filePath);
+	try
+	{
+		myFile.open(filePath);
+	}
+
+	catch (ifstream::failure e)
+	{
+		cerr << "Could not open file: " << filePath << endl;
+		exit(2);
+	}
 
 	while (getline(myFile, line))
 	{

@@ -14,11 +14,11 @@ using namespace std;
 class SudokuBoardReader
 {
 private:
-	void setSudokuFileParameters(SudokuFile * sf, string params[]);
-	void parseLineOfSudokuBoard(SudokuFile * sf, string values[], int rowNumber);
+	static void setSudokuFileParameters(SudokuFile * sf, vector<string> params);
+	static void parseLineOfSudokuBoard(SudokuFile * sf, vector<string> values, int rowNumber);
 	
 public:
-	SudokuFile * readFile(string filePath);
+	static SudokuFile * readFile(string filePath);
 };
 
 
